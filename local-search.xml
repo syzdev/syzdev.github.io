@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>注册Cesium ion教程</title>
+    <link href="/2021/08/10/%E6%B3%A8%E5%86%8CCesium%20ion%E6%95%99%E7%A8%8B/"/>
+    <url>/2021/08/10/%E6%B3%A8%E5%86%8CCesium%20ion%E6%95%99%E7%A8%8B/</url>
+    
+    <content type="html"><![CDATA[<h1 id="1-问题场景"><a class="markdownIt-Anchor" href="#1-问题场景"></a> 1 问题场景</h1><p>Cesium在没有注册ion时，也是可以使用的，此时Cesium使用的是默认的ion，这个ion随时可能无法使用，即会出现如下状况，只能显示背景星空，无法加载出地球。</p><p><img src="https://cdn.nlark.com/yuque/0/2020/png/1602549/1596524052381-43e1d209-817b-49a8-aee8-c7bb74618936.png" alt="地球、.png" /><br />页面下方的文本：</p><blockquote><p><strong>This application is using Cesium’s default ion access token. Please assign <em>Cesium.Ion.defaultAccessToken</em> with an access token from your ion account before making any Cesium API calls. You can sign up for a free ion account at <a href="https://cesium.com/">https://cesium.com</a>.</strong></p></blockquote><p>大致翻译为：</p><blockquote><p>此应用程序正在使用 Cesium 的默认 ion 访问令牌，请在使用 Ceisum API 调用之前先注册一个你自己的 Cesium ion 访问令牌，你可以在 **<a href="https://cesium.com/">https://cesium.com</a> **免费注册一个账号。</p></blockquote><h1 id="2-注册账号"><a class="markdownIt-Anchor" href="#2-注册账号"></a> 2 注册账号</h1><p>接下来去网站 <a href="https://cesium.com/">https://cesium.com</a> 中进行注册，点击右上角的“SIGN IN”，再点击下方的“Sign up for an account”，如下图：<br /><img src="https://cdn.nlark.com/yuque/0/2020/png/1602549/1596524537639-29dc1b74-0256-448d-a401-04738d253719.png" alt="注册.png" /><br />填写注册信息：<br /><img src="https://cdn.nlark.com/yuque/0/2020/png/1602549/1596524670006-0401a469-b45a-4cb3-b063-cfd2c08daec2.png" alt="注册2.png" /><br />注册成功后点击 “Access Tokens”：<br /><img src="https://cdn.nlark.com/yuque/0/2020/png/1602549/1596524731408-928c9dd8-eab0-45f8-aae8-c7e9fce9e686.png" alt="注册3.png" /><br />会发现已经有一个默认的 Token，点击它，右侧会出现 Token 信息，点击复制：<br /><img src="https://cdn.nlark.com/yuque/0/2020/png/1602549/1596525033033-638de917-b99c-4585-af3d-a0171c611607.png" alt="注册11.png" /><br />复制后切换到代码中，在语句 <code>var viewer = new Cesium.Viewer(&quot;cesiumContainer&quot;);</code> 前面加上 <code>Cesium.Ion.defaultAccessToken = 'your Token'</code> ，即：</p><figure class="highlight html"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span>  <br><span class="javascript">  Cesium.Ion.defaultAccessToken = <span class="hljs-string">&#x27;xxxxxxxxxxxxxxxxxx&#x27;</span>;</span><br><span class="javascript">  <span class="hljs-keyword">var</span> viewer = <span class="hljs-keyword">new</span> Cesium.Viewer(<span class="hljs-string">&quot;cesiumContainer&quot;</span>);</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span><br></code></pre></div></td></tr></table></figure><p>刷新页面，发现地球又回来了：<br /><img src="https://cdn.nlark.com/yuque/0/2020/png/1602549/1596525267029-f7736df6-e846-433b-97cb-00be80095c9f.png" alt="地球123.png" /><br />注意，对于有特殊需求的，可以自己创建 Token，点击“Create token”，根据提示创建即可：<br /><img src="https://cdn.nlark.com/yuque/0/2020/png/1602549/1596525337635-7310ff3f-76d5-4f60-b9e6-23d4902d1762.png" alt="创建.png" /><br />以下信息根据需求填写：<br /><img src="https://cdn.nlark.com/yuque/0/2020/png/1602549/1596525374006-81ed5ffd-2fbd-4584-8512-aea298cc0675.png" alt="创建123123.png" /></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>前端</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Express基础</title>
     <link href="/2021/08/08/Express%E5%9F%BA%E7%A1%80/"/>
     <url>/2021/08/08/Express%E5%9F%BA%E7%A1%80/</url>
