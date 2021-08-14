@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>npm镜像源查看和切换</title>
+    <link href="/2021/08/14/npm%E9%95%9C%E5%83%8F%E6%BA%90%E6%9F%A5%E7%9C%8B%E5%92%8C%E5%88%87%E6%8D%A2/"/>
+    <url>/2021/08/14/npm%E9%95%9C%E5%83%8F%E6%BA%90%E6%9F%A5%E7%9C%8B%E5%92%8C%E5%88%87%E6%8D%A2/</url>
+    
+    <content type="html"><![CDATA[<h1 id="1-镜像源的切换"><a class="markdownIt-Anchor" href="#1-镜像源的切换"></a> 1 镜像源的切换</h1><ol><li>全局切换镜像源：<code>npm config set registry [http://registry.npm.taobao.org](http://registry.npm.taobao.org)</code></li><li>查看镜像源使用状态：<code>npm get registry</code></li><li>全局切换官方镜像源：<code>npm config set registry [http://www.npmjs.org](http://www.npmjs.org)</code></li></ol><h1 id="2-使用nrm切换镜像源"><a class="markdownIt-Anchor" href="#2-使用nrm切换镜像源"></a> 2 使用nrm切换镜像源</h1><ol><li>下载 nrm：<code>npm install -g nrm</code></li><li>查看可切换的镜像源： <code>nrm ls</code> (*表示正在使用的镜像源)</li></ol><figure class="highlight java"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs java">* npm -------- https:<span class="hljs-comment">//registry.npmjs.org/</span><br>  yarn ------- https:<span class="hljs-comment">//registry.yarnpkg.com/</span><br>  cnpm ------- http:<span class="hljs-comment">//r.cnpmjs.org/</span><br>  taobao ----- https:<span class="hljs-comment">//registry.npm.taobao.org/</span><br>  nj --------- https:<span class="hljs-comment">//registry.nodejitsu.com/</span><br>  npmMirror -- https:<span class="hljs-comment">//skimdb.npmjs.com/registry/</span><br>  edunpm ----- http:<span class="hljs-comment">//registry.enpmjs.org/</span><br></code></pre></div></td></tr></table></figure><ol start="3"><li>切换淘宝镜像源：<code>nrm use taobao</code></li></ol><h1 id="3-注意"><a class="markdownIt-Anchor" href="#3-注意"></a> 3 注意</h1><p><strong>注意：<strong>在Linux系统环境里面如果下载nrm后执行<code>nrm ls</code>命令出现未找到命令，需要配置</strong>全局的软链接</strong>：<code>sudo ln -s /home/nodejs/bin/nrm /usr/local/bin/</code>其中 <code>/home/nodejs/bin/nrm</code> 是指你本地安装nodejs包的路径。<code>/usr/local/bin/</code>路径是你的程序命令执行路径，相当与Windows系统下的环境变量 PATH 路径，配置后可以在系统的任意位置执行你的命令。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>前端</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>注册天地图Token教程</title>
     <link href="/2021/08/11/%E6%B3%A8%E5%86%8C%E5%A4%A9%E5%9C%B0%E5%9B%BEToken%E6%95%99%E7%A8%8B/"/>
     <url>/2021/08/11/%E6%B3%A8%E5%86%8C%E5%A4%A9%E5%9C%B0%E5%9B%BEToken%E6%95%99%E7%A8%8B/</url>
